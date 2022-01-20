@@ -16,8 +16,8 @@ apiserver.get("/",(request,response)=>{
     response.send("ciao client sei in home");
 });
 apiserver.post("/registrazione",(request,response)=>{
-console.log("insert student "+request.body.user+" and "+request.body.password);
-var scrivere=request.body.user+","+request.body.password;
+console.log("insert student "+request.query.user+" and "+request.query.password);
+var scrivere=request.query.user+","+request.query.password;
 fs.writeFile("studenti.js",scrivere,err=>{
     if(err){
          console.log("error:"+err);
