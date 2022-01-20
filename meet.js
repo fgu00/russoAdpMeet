@@ -36,7 +36,7 @@ response.send("student save");
 })
 });
 apiserver.post("/control",(request,response)=>{          
-    console.log("student "+request.body.user+" and "+request.body.password);
+    console.log("student "+request.query.user+" and "+request.query.password);
     //leggere file
     sf.readFile("studenti.js",(err,data)=>{
         if(err){ console.log("error:"+err);
@@ -44,7 +44,7 @@ apiserver.post("/control",(request,response)=>{
         var students=JSON.parse(data);
         console.log("students:"+students[0].surname);
         for(var a=0;a<students.length;a++){
-            if(students[a].user==request.body.user && students[a].password==students.body.password){
+            if(students[a].user==request.query.user && students[a].password==students.query.password){
                 response.send("student present"); 
             }
         }
@@ -61,7 +61,7 @@ apiserver.post("/delete",(err,response)=>{
             fifo.push(students[a]);    
         }
         for(var a=0;a<students.length;a++){
-            if(request.body.user==fifo.shift()){
+            if(request.query.user==fifo.shift()){
                 response.send("cancelled user");
             }else{
                 response.send("user don't exist ")
