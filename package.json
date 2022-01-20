@@ -1,0 +1,23 @@
+{
+  "name": "russoadpmeet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "meet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgu00/russoAdpMeet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fgu00/russoAdpMeet/issues"
+  },
+  "homepage": "https://github.com/fgu00/russoAdpMeet#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "fs": "0.0.1-security"
+  }
+}
