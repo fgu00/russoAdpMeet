@@ -2,7 +2,7 @@
 <application xmlns="http://wadl.dev.java.net/2009/02">
   <doc xml:lang="en" title="http://localhost3000"/>
   <resources base="http://localhost3000">
-    <resource path="registrazione" id="">
+    <resource path="delete" id="">
       <doc xml:lang="en" title=""/>
       <param name="user" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
       <param name="password" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
