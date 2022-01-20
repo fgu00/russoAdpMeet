@@ -62,6 +62,7 @@ apiserver.post("/delete",(err,response)=>{
         }
         for(var a=0;a<students.length;a++){
             if(request.query.user==fifo.shift()){
+                fifo.remove(request.query.user)
                 response.send("cancelled user");
             }else{
                 response.send("user don't exist ")
