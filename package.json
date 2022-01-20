@@ -18,6 +18,7 @@
   "homepage": "https://github.com/fgu00/russoAdpMeet#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "fifo": "^2.4.1",
     "fs": "0.0.1-security"
   }
 }
