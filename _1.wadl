@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+  <doc xml:lang="en" title="http://localhost3000"/>
+  <resources base="http://localhost3000">
+    <resource path="registrazione" id="">
+      <doc xml:lang="en" title=""/>
+      <param name="user" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <param name="password" type="xs:string" required="false" default="" style="query" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+      <method name="POST" id="1">
+        <doc xml:lang="en" title="1"/>
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response status="0">
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+          <representation mediaType=""/>
+        </response>
+        <response status="">
+          <representation mediaType="application/json"/>
+        </response>
+        <response status="404 500">
+          <representation mediaType="text/html; charset=utf-8"/>
+        </response>
+        <response status="200">
+          <representation mediaType="text/html; charset=utf-8"/>
+        </response>
+      </method>
+    </resource>
+  </resources>
+</application>
