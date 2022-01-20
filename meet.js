@@ -17,6 +17,15 @@ apiserver.get("/",(request,response)=>{
 });
 apiserver.post("/registrazione",(request,response)=>{
 console.log("insert student "+request.query.user+" and "+request.query.password);
+sf.readFile("studenti.js",(err,data)=>{
+    if(err){ console.log("error:"+err);
+}else{
+    var students=JSON.parse(data);
+    for(var a=0;a<students.length;a++){
+        fifo.push(students[a]);    
+    }
+}
+})
 var scrivere=request.query.user+","+request.query.password;
 fs.writeFile("studenti.js",scrivere,err=>{
     if(err){
