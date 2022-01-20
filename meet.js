@@ -34,8 +34,8 @@ apiserver.post("/control",(request,response)=>{
         var students=JSON.parse(data);
         console.log("students:"+students[0].surname);
         for(var a=0;a<students.length;a++){
-            if(students[a].id==request.query.id){
-                response.send("lo studente è: "+students[a].id+" "+students[a].surname+" "+students[a].name); 
+            if(students[a].user==request.body.user && students[a].password==students.body.password){
+                response.send("student present"); 
             }
         }
     }
